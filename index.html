@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/style.css">
@@ -16,7 +17,8 @@
     <h1>Weather Dashboard</h1>
     </header>
 
-    <!-- search bar -->
+    <!-- search bar & search history-->
+    <div class="search-bar-history">
     <nav class="navbar bg-light">
         <div class="container-fluid">
             <form class="d-flex" role="search">
@@ -24,27 +26,24 @@
                     aria-label="Search">
                 <button class="btn btn-outline-success" id="search" type="submit">Search</button>
             </form>
+                  
         </div>
     </nav>
+    <div class="search-history d-grid gap-2 col-6 mx-auto" id="search-history"></div>
+    </div>
+
 
     <!-- current weather -->
-    <section class="current-weather container border border-info rounded" id="current-weather"></section>
+    <section class="current-weather" id="current-weather">
+    </section>
 
     <!-- 5 day forecast boxes -->
     <h2 id="5-day-forecast">5-Day Forecast</h2>
     <section class="5-day-weather-forecast">
-        <box class="weather-box inline container border border-success rounded" id="weather-1">""</box>
-
-        <box class="weather-box inline container border border-success rounded" id="weather-2">""</box>
-
-        <box class="weather-box inline container border border-success rounded" id="weather-3">""</box>
-
-        <box class="weather-box inline container border border-success rounded" id="weather-4">""</box>
-
-        <box class="weather-box inline container border border-success rounded" id="weather-5">""</box>
-
+        <box class="weather-box inline position-relative" id="weather-1"></box>
     </section>
     
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./assets/script.js"></script>
 </body>

@@ -1,0 +1,40 @@
+.search-bar-history {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+
+}
+
+.results-button {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+}
+
+.navbar {
+    position: abolute;
+    margin-left:auto
+}
+
+.search-history {
+    display: inline-block;
+    size: auto;
+}
+
+.current-weather {
+    position: absolute;
+    margin-right: auto;
+    display: inline;
+    width: 50%;
+}
+
+.current-weather-card {
+    height: auto;
+    width: auto;
+}
+
+.weather-box {
+    display: inline;
+    display: flex;
+}
