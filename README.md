@@ -11,5 +11,6 @@ Search history is saved to local storage so that the last five searches are popu
 
 <img src="./assets/screenshot.png" alt="weather-dashboard screenshot"></>
 
-link to deployed webpage:
-link to repository:
+link to deployed webpage: https://mconanan.github.io/weather-dashboard/
+
+link to repository: https://github.com/mconanan/weather-dashboard
