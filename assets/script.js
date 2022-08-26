@@ -58,6 +58,8 @@ function resultsClicked(searchValue) {
             long = data[0].lon;
             // because of the asynchonous nature of js, we need to call the weatherAPI function here, so it only runs once the location function data is returned.
 
+            $('#search-value').append(`${searchValue}`)
+
             $('#current-weather').empty()
             $('#weather-1').empty()
 
@@ -71,10 +73,10 @@ function resultsClicked(searchValue) {
 
 function latLongAPI(event) {
     event.preventDefault();
-    console.log("Searching");
+    
     // update or capture the value from the form input
     searchValue = searchInput.value.trim();
-
+    console.log(searchValue);
 
     saveCity(searchValue);
 
@@ -95,7 +97,7 @@ function latLongAPI(event) {
             $('#weather-1').empty()
 
             searchInput.value = "";
-            weatherAPI();
+            weatherAPI();      
         });
 
 
@@ -118,6 +120,7 @@ function weatherAPI() {
 
             $('#current-weather').append(`<div class="bg-primary card container shadow current-weather-card position-absolute top-50 start-0 translate-middle">
             <h2 class="moment">${moment().format("dddd, MMMM Do YYYY")}</h2>
+            <h2>${searchValue}</h2>
             <h3>Temp:${parseInt(fheit)}</h2>
             <h4>Wind Speed:${weather.current.wind_speed} MPH</h3>
             <h4>Humidity:${weather.current.humidity}%</h3>
@@ -173,13 +176,8 @@ console.log('test', kelvinToFahrenheit(275))
 
 renderCity();
 
-// To Do:
-// click event on results button
-// how to get columns inline
-// how to fix the date
-// how to format current date/time
 
-
+// todo: how to get searchValue to populate. gets cleared before rendering.
 
 
 
